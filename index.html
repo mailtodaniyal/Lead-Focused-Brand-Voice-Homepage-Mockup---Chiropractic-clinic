@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodlands Family Chiropractic | #1 Chiropractor in The Woodlands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --teal: #3CA6A6;
+            --bronze: #A87C4F;
+            --light-gray: #E0E0E0;
+            --dark-gray: #333333;
+            --light-bg: #F9F9F9;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--teal);
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--light-bg);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--teal);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: #2d8f8f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-secondary {
+            background-color: var(--bronze);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            background-color: #946b43;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--teal);
+            border: 2px solid var(--teal);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--teal);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--teal);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--bronze);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--teal);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-cta .btn {
+            margin-left: 1rem;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons .btn {
+            margin: 0 0.5rem;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            text-align: center;
+        }
+
+        .trust-badge {
+            max-width: 200px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: left;
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .review-text:before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--teal);
+            opacity: 0.2;
+            position: absolute;
+            left: -1rem;
+            top: -1.5rem;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--teal);
+        }
+
+        /* Video Testimonials */
+        .video-testimonials {
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .quote-carousel {
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .quote-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .quote-slide.active {
+            opacity: 1;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            margin: 0 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-dot.active {
+            background: var(--teal);
+            transform: scale(1.2);
+        }
+
+        /* Pain Areas */
+        .pain-areas {
+            text-align: center;
+        }
+
+        .body-map {
+            position: relative;
+            max-width: 500px;
+            margin: 3rem auto;
+        }
+
+        .body-outline {
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        .pain-point {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--teal);
+            opacity: 0.7;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pain-point:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--teal);
+            opacity: 0.5;
+            animation: pulse 2s infinite;
+        }
+
+        .pain-point:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .pain-point i {
+            color: white;
+            z-index: 1;
+        }
+
+        .pain-point[data-area="neck"] { top: 15%; left: 50%; transform: translateX(-50%); }
+        .pain-point[data-area="back"] { top: 40%; left: 50%; transform: translateX(-50%); }
+        .pain-point[data-area="head"] { top: 5%; left: 50%; transform: translateX(-50%); }
+        .pain-point[data-area="sciatica"] { top: 65%; left: 50%; transform: translateX(-50%); }
+        .pain-point[data-area="shoulder"] { top: 25%; left: 30%; }
+        .pain-point[data-area="disc"] { top: 45%; left: 45%; }
+
+        .pain-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--teal);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-left: 4px solid var(--bronze);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+
+        /* Treatments Section */
+        .treatments-accordion {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .accordion-header {
+            background: var(--white);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background: #f5f5f5;
+        }
+
+        .accordion-content {
+            background: var(--white);
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 300px;
+            padding: 1.5rem;
+        }
+
+        /* First Visit Section */
+        .first-visit {
+            text-align: center;
+        }
+
+        .visit-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .visit-step {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .visit-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--teal);
+            color: var(--white);
+            border-radius: 50%;
+            line-height: 40px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            background: linear-gradient(to right, var(--teal), #2d8f8f);
+            color: var(--white);
+            padding: 6rem 0;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+        }
+
+        .final-cta h2:after {
+            background: var(--white);
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .quick-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .quick-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--teal);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--teal);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 1.5rem 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .header-cta .btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons .btn {
+                display: block;
+                margin: 0.5rem auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">The<span>Logo</span></a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <div class="header-cta">
+                <a href="tel:281-123-4567" class="btn btn-outline">Call Now</a>
+                <a href="#schedule" class="btn btn-primary">Schedule</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>#1 Chiropractor in The Woodlands</h1>
+            <h2>Trusted Chiropractic Care for Families, Athletes & Everyday Life</h2>
+            <p>Our results-driven approach means every patient receives custom treatment tailored to their unique goals. Whether you're recovering from injury, dealing with chronic pain, or simply maintaining wellness, we're here to help you live your fullest life.</p>
+            <div class="hero-buttons">
+                <a href="#schedule" class="btn btn-primary">Schedule an Appointment</a>
+                <a href="#services" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Voted the Best Chiropractor in The Woodlands — 8 Years Straight</h2>
+            </div>
+            <p>With over 250 5-star reviews, we're proud to be The Woodlands' trusted source for high-quality chiropractic care. Our patients consistently share their experiences of pain relief, better mobility, and compassionate support.</p>
+            
+            <img src="placeholder image.jpg" alt="Best of Woodlands Badge" class="trust-badge">
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p class="review-text">Dr. Keyes and the team truly care. I haven't felt this good in years!</p>
+                    <p class="review-author">— Sarah M.</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">After my car accident, I was in constant pain. WFC created a personalized plan that got me back to normal in just weeks.</p>
+                    <p class="review-author">— Michael T.</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">The whole family goes here - from my kids to my parents. Everyone receives the exact care they need.</p>
+                    <p class="review-author">— Jennifer L.</p>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Read Patient Reviews</a>
+                <a href="#schedule" class="btn btn-secondary">Schedule Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="video-testimonials bg-light">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Real Patients. Real Results.</h2>
+                <p>Hear how chiropractic care at WFC has changed lives.</p>
+            </div>
+            
+            <p>From migraine relief to post-accident recovery, our patients share their journeys to healing and mobility through customized chiropractic care.</p>
+            
+            <div class="video-container">
+                <img src="https://via.placeholder.com/1280x720/f5f5f5/3CA6A6?text=Video+Testimonial" alt="Video testimonial placeholder" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            
+            <div class="quote-carousel">
+                <div class="quote-slide active">
+                    <p class="quote-text">"I suffered from chronic headaches for years. After just a few sessions, my pain decreased significantly."</p>
+                    <p class="review-author">— Amanda R.</p>
+                </div>
+                <div class="quote-slide">
+                    <p class="quote-text">"The care I received after my sports injury was exceptional. I'm back to playing at 100%."</p>
+                    <p class="review-author">— David K.</p>
+                </div>
+                <div class="quote-slide">
+                    <p class="quote-text">"As a senior, I was skeptical about chiropractic care. Now I feel more mobile than I have in a decade."</p>
+                    <p class="review-author">— Robert P.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <div class="carousel-dot active" data-slide="0"></div>
+                <div class="carousel-dot" data-slide="1"></div>
+                <div class="carousel-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Areas -->
+    <section class="pain-areas">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Where Are You Feeling Pain?</h2>
+                <p>Click an area to learn how chiropractic care can help.</p>
+            </div>
+            
+            <div class="body-map">
+                <img src="Where is Your Pain EXAMPLE Diagram.png" alt="Human body outline" class="body-outline">
+                
+                <!-- <div class="pain-point" data-area="neck">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="pain-point" data-area="back">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="pain-point" data-area="head">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="pain-point" data-area="sciatica">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="pain-point" data-area="shoulder">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="pain-point" data-area="disc">
+                    <i class="fas fa-plus"></i>
+                </div> -->
+            </div>
+        </div>
+        
+        <!-- Pain Modal -->
+        <div class="pain-modal" id="painModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 id="modal-title">Neck Pain</h3>
+                <p id="modal-content">Chiropractic care for neck pain involves gentle adjustments to improve spinal alignment, reduce tension, and increase range of motion. Our personalized approach addresses the root cause of your discomfort.</p>
+                <a href="#" class="btn btn-primary">Learn More About Treatment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Doctors -->
+    <section class="meet-doctors bg-light">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Meet our Chiropractic & Wellness Team</h2>
+                <p>Get to know the trusted professionals guiding your care.</p>
+            </div>
+            
+            <p>At The Woodlands Family Chiropractic, every doctor brings a unique skill set and a shared commitment to your health and healing.</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/400x500/f5f5f5/cccccc?text=Dr.+Smith" alt="Dr. John Smith" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. John Smith</h3>
+                        <p>Chiropractic Physician</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/400x500/f5f5f5/cccccc?text=Dr.+Johnson" alt="Dr. Sarah Johnson" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Pediatric Specialist</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/400x500/f5f5f5/cccccc?text=Dr.+Lee" alt="Dr. Michael Lee" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. Michael Lee</h3>
+                        <p>Rehabilitation Expert</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-buttons" style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">Meet the Team</a>
+                <a href="#schedule" class="btn btn-secondary">Schedule an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Chiropractic Services for Every Stage of Life</h2>
+                <p>From newborns to seniors, we offer tailored care for all.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Chiropractic Adjustments</h3>
+                    <p>Restore alignment and relieve pain naturally with our precise adjustment techniques.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatric Chiropractic</h3>
+                    <p>Gentle, effective care for kids and babies to support healthy development.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Prenatal Chiropractic</h3>
+                    <p>Comfort and alignment during every stage of pregnancy for mother and baby.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Auto Injury Rehab</h3>
+                    <p>Recover from whiplash and soft tissue injuries with our comprehensive rehab programs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Postural & Lifestyle Coaching</h3>
+                    <p>Support beyond the adjustment table with personalized lifestyle recommendations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Senior Care</h3>
+                    <p>Specialized gentle techniques to maintain mobility and reduce age-related discomfort.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section class="treatments bg-light">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Therapeutic Techniques That Support Your Healing</h2>
+            </div>
+            
+            <div class="treatments-accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Functional Fitness / Corrective Movement</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Targeted exercises to correct muscle imbalances, improve movement patterns, and prevent future injuries. Our doctors create personalized programs based on your specific needs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Massage Therapy</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Therapeutic massage to relieve muscle tension, improve circulation, and enhance the effects of chiropractic adjustments. Various techniques available based on your condition.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Therapeutic Ultrasound</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Using sound waves to promote tissue healing, reduce inflammation, and alleviate pain. This non-invasive therapy is especially effective for soft tissue injuries.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Electrical Stimulation</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Gentle electrical currents applied to targeted areas to reduce pain, decrease muscle spasms, and accelerate the healing process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Visit Section -->
+    <section class="first-visit">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Your First Visit: What to Expect</h2>
+                <p>We make starting care simple and stress-free.</p>
+            </div>
+            
+            <div class="visit-steps">
+                <div class="visit-step">
+                    <div class="step-number">1</div>
+                    <h3>Complete Your Health History</h3>
+                    <p>Fill out your forms online before your visit to save time.</p>
+                </div>
+                <div class="visit-step">
+                    <div class="step-number">2</div>
+                    <h3>Comprehensive Consultation</h3>
+                    <p>We'll discuss your health goals and concerns in detail.</p>
+                </div>
+                <div class="visit-step">
+                    <div class="step-number">3</div>
+                    <h3>Thorough Examination</h3>
+                    <p>We'll perform orthopedic, neurological, and chiropractic tests.</p>
+                </div>
+                <div class="visit-step">
+                    <div class="step-number">4</div>
+                    <h3>Personalized Treatment Plan</h3>
+                    <p>We'll create a customized care plan to address your specific needs.</p>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Download New Patient Forms</a>
+                <a href="#schedule" class="btn btn-secondary">Schedule Your First Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog bg-light">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Wellness Insights & Chiropractic Education</h2>
+                <p>Stay informed with our latest health articles.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="placeholder image.jpg" alt="Blog post" class="blog-img">
+                    <div class="blog-content">
+                        <p class="blog-date">May 15, 2025</p>
+                        <h3>5 Ways to Improve Your Posture While Working From Home</h3>
+                        <p>Simple adjustments to your workspace can prevent back and neck pain.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="placeholder image.jpg" alt="Blog post" class="blog-img">
+                    <div class="blog-content">
+                        <p class="blog-date">April 28, 2025</p>
+                        <h3>Understanding Sciatica: Causes and Treatment Options</h3>
+                        <p>Learn how chiropractic care can relieve sciatic nerve pain.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="placeholder image.jpg" alt="Blog post" class="blog-img">
+                    <div class="blog-content">
+                        <p class="blog-date">April 10, 2025</p>
+                        <h3>Chiropractic Care for Children: What Parents Should Know</h3>
+                        <p>Gentle approaches to support your child's development and wellness.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="schedule">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Ready to Start Your Wellness Journey?</h2>
+                <p>Take the first step toward a pain-free, active life today.</p>
+            </div>
+            
+            <div class="quick-links">
+                <a href="tel:281-123-4567" class="quick-link"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="#" class="quick-link"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+                <a href="#" class="quick-link"><i class="fas fa-calendar"></i> Schedule Online</a>
+                <a href="#" class="quick-link"><i class="fas fa-question-circle"></i> Ask a Question</a>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-secondary">Schedule Your Appointment</a>
+                <a href="#" class="btn btn-outline" style="background: rgba(255,255,255,0.2); color: white; border-color: white;">Download New Patient Forms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Woodlands Family Chiropractic</h3>
+                    <p>Providing exceptional chiropractic care to The Woodlands community since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, The Woodlands, TX 77380</li>
+                        <li><i class="fas fa-phone"></i> (281) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@wfcwellness.com</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday: 8:00 AM - 6:00 PM</li>
+                        <li>Tuesday: 8:00 AM - 6:00 PM</li>
+                        <li>Wednesday: 8:00 AM - 6:00 PM</li>
+                        <li>Thursday: 8:00 AM - 6:00 PM</li>
+                        <li>Friday: 8:00 AM - 12:00 PM</li>
+                        <li>Saturday: By Appointment</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Woodlands Family Chiropractic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Testimonial Carousel
+        const quoteSlides = document.querySelectorAll('.quote-slide');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            quoteSlides.forEach(slide => slide.classList.remove('active'));
+            carouselDots.forEach(dot => dot.classList.remove('active'));
+            
+            quoteSlides[index].classList.add('active');
+            carouselDots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        carouselDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto-advance slides
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % quoteSlides.length;
+            showSlide(currentSlide);
+        }, 5000);
+        
+        // Pain Points Modal
+        const painPoints = document.querySelectorAll('.pain-point');
+        const painModal = document.getElementById('painModal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.querySelector('.close-modal');
+        
+        const painInfo = {
+            neck: {
+                title: 'Neck Pain',
+                content: 'Chiropractic care for neck pain involves gentle adjustments to improve spinal alignment, reduce tension, and increase range of motion. Our personalized approach addresses the root cause of your discomfort.'
+            },
+            back: {
+                title: 'Back Pain',
+                content: 'Whether acute or chronic, back pain responds exceptionally well to chiropractic care. We use targeted adjustments and complementary therapies to relieve pressure and restore proper function.'
+            },
+            head: {
+                title: 'Headaches & Migraines',
+                content: 'Many headaches originate from neck tension and spinal misalignment. Our approach focuses on correcting these issues to provide lasting relief from chronic headaches.'
+            },
+            sciatica: {
+                title: 'Sciatica',
+                content: 'Sciatic nerve pain can be debilitating. Our chiropractors use specific techniques to relieve pressure on the sciatic nerve, reducing pain and improving mobility.'
+            },
+            shoulder: {
+                title: 'Shoulder Pain',
+                content: 'Shoulder issues often relate to spinal alignment and posture. We address the root cause of shoulder pain with adjustments and therapeutic exercises.'
+            },
+            disc: {
+                title: 'Disc Issues',
+                content: 'Herniated or bulging discs can cause significant pain. Our non-invasive approaches help relieve pressure on affected discs and promote natural healing.'
+            }
+        };
+        
+        painPoints.forEach(point => {
+            point.addEventListener('click', () => {
+                const area = point.getAttribute('data-area');
+                modalTitle.textContent = painInfo[area].title;
+                modalContent.textContent = painInfo[area].content;
+                painModal.style.display = 'flex';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            painModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === painModal) {
+                painModal.style.display = 'none';
+            }
+        });
+        
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                content.classList.toggle('active');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileToggle.querySelector('i').classList.add('fa-bars');
+                        mobileToggle.querySelector('i').classList.remove('fa-times');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
